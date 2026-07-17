@@ -82,22 +82,27 @@ function Hero() {
 
           <div className="flex gap-6 mt-8 text-2xl">
 
-
             <a
-              href="#"
+              href="https://github.com/hadia55op"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="hover:text-cyan-400 transition"
             >
               <FaGithub />
             </a>
 
-
+            {/*
             <a
-              href="#"
+              href="https://www.linkedin.com/in/your-linkedin-profile/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               className="hover:text-cyan-400 transition"
             >
               <FaLinkedin />
             </a>
-
+            */}
 
           </div>
 

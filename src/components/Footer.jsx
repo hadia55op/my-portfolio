@@ -3,7 +3,7 @@ function Footer() {
     <footer className="py-8 text-center border-t border-slate-800">
 
       <p className="text-slate-500">
-        © 2026 Your Name. Built with React & Tailwind CSS.
+        © 2026 Hadia Khalil. Built with React & Tailwind CSS.
       </p>
 
     </footer>

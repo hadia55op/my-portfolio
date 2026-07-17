@@ -32,24 +32,31 @@ function Navbar() {
         </div>
 
 
-        <div className="flex gap-4 text-xl">
+     <div className="flex gap-4 text-xl">
 
-          <a
-            href="#"
-            className="hover:text-cyan-400"
-          >
-            <FaGithub />
-          </a>
+       <a
+         href="https://github.com/hadia55op"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub Profile"
+         className="hover:text-cyan-400"
+       >
+         <FaGithub />
+       </a>
 
+       {/*
+       <a
+         href="https://www.linkedin.com/in/your-linkedin-profile/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LinkedIn Profile"
+         className="hover:text-cyan-400"
+       >
+         <FaLinkedin />
+       </a>
+       */}
 
-          <a
-            href="#"
-            className="hover:text-cyan-400"
-          >
-            <FaLinkedin />
-          </a>
-
-        </div>
+     </div>
 
 
       </div>

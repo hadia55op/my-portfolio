@@ -127,15 +127,23 @@ function Projects() {
 
             {/* Button */}
 
+            {/* Button */}
+
             <div className="mt-8">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-5 py-2 rounded-lg transition"
-              >
-                GitHub Repository
-              </a>
+              {project.github ? (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-5 py-2 rounded-lg transition"
+                >
+                  GitHub Repository
+                </a>
+              ) : (
+                <span className="inline-block bg-slate-800 text-slate-400 px-5 py-2 rounded-lg">
+                  Repository Coming Soon
+                </span>
+              )}
             </div>
           </div>
         ))}
