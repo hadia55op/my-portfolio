@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+//import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
