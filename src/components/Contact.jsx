@@ -15,14 +15,12 @@ function Contact() {
           Let's build something amazing.
         </p>
 
-        {/*
         <a
-          href="mailto:your@email.com"
-          className="bg-cyan-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400"
+          href="mailto:hadizaidkhan@gmail.com"
+          className="bg-cyan-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 transition"
         >
           Send Email
         </a>
-        */}
 
       </div>
     </section>
