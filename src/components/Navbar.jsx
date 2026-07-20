@@ -14,19 +14,23 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-lg border-b border-gray-200 z-50">
+
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* Logo */}
         <a
-          href="#"
+          href="#home"
           className="text-2xl font-bold tracking-tight text-gray-900"
         >
-          Hadia<span className="text-blue-600">.</span>
+          Hadia
+          <span className="text-blue-600">.</span>
         </a>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8">
+
           {links.map((link) => (
+
             <a
               key={link.name}
               href={link.href}
@@ -34,7 +38,9 @@ function Navbar() {
             >
               {link.name}
             </a>
+
           ))}
+
         </nav>
 
         {/* Right Side */}
@@ -44,14 +50,16 @@ function Navbar() {
             href="https://github.com/hadia55op"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub Profile"
             className="text-xl text-gray-600 hover:text-blue-600 transition"
           >
             <FaGithub />
           </a>
 
           <button
-            className="md:hidden text-2xl text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            className="md:hidden text-2xl text-gray-700 hover:text-blue-600 transition"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -61,8 +69,8 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-
       {isOpen && (
+
         <div className="md:hidden bg-white border-t border-gray-200">
 
           <div className="flex flex-col py-4">
@@ -83,6 +91,7 @@ function Navbar() {
           </div>
 
         </div>
+
       )}
 
     </header>
