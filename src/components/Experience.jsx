@@ -1,212 +1,304 @@
 import { motion } from "framer-motion";
+import Card from "./ui/Card";
+import SectionTitle from "./ui/SectionTitle";
 
 function Experience() {
+
+  const technologies = [
+    "Java 21",
+    "Spring Boot",
+    "Spring Security",
+    "Thymeleaf",
+    "HTMX",
+    "Tailwind CSS",
+    "DaisyUI",
+    "PostgreSQL",
+    "SQLite",
+    "REST API",
+    "Maven",
+    "GitHub",
+    "CI/CD",
+    "Render",
+    "Supabase"
+  ];
+
+
+  const contributions = [
+    "Developed frontend functionality using Thymeleaf, Tailwind CSS, and DaisyUI.",
+    "Implemented backend features using Java and Spring Boot.",
+    "Worked with role-based authentication and authorization using Spring Security.",
+    "Contributed to user management, team administration, player handling, and dashboards.",
+    "Improved forms with validation and better user experience.",
+    "Performed debugging, testing, and improvement of existing workflows.",
+    "Participated in documentation, planning, and GitHub workflows."
+  ];
+
+
+  const features = [
+    "Trial training registration system",
+    "Dynamic FAQ management",
+    "Team and player administration",
+    "Role-based dashboards",
+    "External sports API integration",
+    "Communication features"
+  ];
+
+
   return (
     <section
       id="experience"
-      className="max-w-6xl mx-auto px-6 py-24"
+      className="py-24 bg-gray-50"
     >
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
+      <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 mb-10">
-          LIA Experience
-        </h2>
 
+        <motion.div
+          initial={{opacity:0,y:40}}
+          whileInView={{opacity:1,y:0}}
+          transition={{duration:0.7}}
+          viewport={{once:true}}
+        >
 
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-8">
 
+          <SectionTitle>
+            LIA Experience
+          </SectionTitle>
 
-          <h3 className="text-2xl font-semibold mb-2">
-            Full Stack Developer Intern
-          </h3>
 
 
-          <p className="text-slate-400 mb-6">
-            YH LIA Internship - Full Stack Development
-          </p>
+          <Card>
 
 
+            {/* Header */}
 
-          <p className="text-slate-300 leading-8 mb-6">
+            <div className="mb-10">
 
-            During my LIA period, I contributed to the development of a
-            modern web application for managing FBK Balkan's sports
-            activities. The platform was designed to digitalize and
-            streamline administration, communication, player management,
-            and public information.
+              <h3 className="
+                text-3xl
+                font-bold
+                text-gray-900
+              ">
+                Full Stack Developer Intern
+              </h3>
 
-          </p>
 
+              <p className="
+                mt-2
+                text-blue-600
+                font-medium
+              ">
+                YH LIA Internship - Full Stack Development
+              </p>
 
+            </div>
 
-          <h4 className="text-xl text-cyan-400 mb-4">
-            Project Overview
-          </h4>
 
 
-          <p className="text-slate-400 leading-7 mb-6">
+            {/* Description */}
 
-            The application provides solutions for visitors, parents,
-            coaches, and administrators through public pages,
-            trial training registration, team administration,
-            role-based dashboards, and integrations with external
-            sports systems.
+            <p className="
+              text-gray-600
+              leading-8
+              text-lg
+              mb-10
+            ">
 
-          </p>
+              During my LIA period, I contributed to the development
+              of a modern web application for managing FBK Balkan's
+              sports activities. The platform was created to improve
+              administration, communication, player management, and
+              public information.
 
+            </p>
 
 
-          <h4 className="text-xl text-cyan-400 mb-4">
-            My Contributions
-          </h4>
 
+            {/* Project Overview */}
 
-          <ul className="list-disc ml-6 text-slate-400 space-y-3">
+            <div className="mb-10">
 
+              <h4 className="
+                text-xl
+                font-bold
+                text-gray-900
+                mb-4
+              ">
+                Project Overview
+              </h4>
 
-            <li>
-              Developed and improved frontend functionality using
-              Thymeleaf, Tailwind CSS, DaisyUI.
-            </li>
 
+              <p className="
+                text-gray-600
+                leading-7
+              ">
 
-            <li>
-              Implemented and improved backend features using
-              Spring Boot and Java.
-            </li>
+                The application provides solutions for visitors,
+                parents, coaches, and administrators through public
+                pages, trial registration, team administration,
+                dashboards, and external sports integrations.
 
+              </p>
 
-            <li>
-              Worked with role-based authentication and authorization
-              using Spring Security.
-            </li>
 
+            </div>
 
-            <li>
-              Contributed to user management, team administration,
-              player handling, and dashboard functionality.
-            </li>
 
 
-            <li>
-              Developed and improved forms with validation and better
-              user experience, including trial training workflows.
-            </li>
+            {/* Contributions */}
 
+            <div className="mb-10">
 
-            <li>
-              Worked with debugging, bug fixing, testing, and improving
-              existing user flows across frontend and backend.
-            </li>
+              <h4 className="
+                text-xl
+                font-bold
+                text-gray-900
+                mb-5
+              ">
+                My Contributions
+              </h4>
 
 
-            <li>
-              Participated in documentation, task planning, and version
-              control using GitHub workflow.
-            </li>
+              <ul className="
+                space-y-3
+                text-gray-600
+              ">
 
+                {contributions.map((item,index)=>(
+                  <li
+                    key={index}
+                    className="flex gap-3"
+                  >
 
-          </ul>
+                    <span className="text-blue-600">
+                      ✓
+                    </span>
 
+                    <span>
+                      {item}
+                    </span>
 
+                  </li>
+                ))}
 
-          <h4 className="text-xl text-cyan-400 mt-8 mb-4">
-            Key Features Developed
-          </h4>
 
+              </ul>
 
-          <ul className="list-disc ml-6 text-slate-400 space-y-3">
 
+            </div>
 
-            <li>
-              Trial training registration system with follow-up logic
-              and GDPR considerations.
-            </li>
 
 
-            <li>
-              Dynamic FAQ management and public website content.
-            </li>
 
+            {/* Features */}
 
-            <li>
-              Team and player administration features.
-            </li>
+            <div className="mb-10">
 
 
-            <li>
-              Role-based dashboards for administrators and coaches.
-            </li>
+              <h4 className="
+                text-xl
+                font-bold
+                text-gray-900
+                mb-5
+              ">
+                Key Features Developed
+              </h4>
 
 
-            <li>
-              Integration with external sports data APIs for matches
-              and results.
-            </li>
+              <div className="grid md:grid-cols-2 gap-4">
 
 
-            <li>
-              Communication features for contacting parents and teams.
-            </li>
+                {features.map((feature,index)=>(
 
+                  <div
+                    key={index}
+                    className="
+                    bg-gray-50
+                    border
+                    border-gray-200
+                    rounded-xl
+                    p-4
+                    text-gray-600
+                    "
+                  >
 
-          </ul>
+                    {feature}
 
+                  </div>
 
+                ))}
 
 
-          <h4 className="text-xl text-cyan-400 mt-8 mb-4">
-            Technologies Used
-          </h4>
+              </div>
 
 
-          <div className="flex flex-wrap gap-3">
+            </div>
 
 
-            {[
-              "Java 21",
-              "Spring Boot",
-              "Spring Security",
-              "Thymeleaf",
-              "HTMX",
-              "Tailwind CSS",
-              "DaisyUI",
-              "PostgreSQL",
-              "SQLite",
-              "REST API",
-              "Maven",
-              "GitHub",
-              "CI/CD",
-              "Render",
-              "Supabase"
-            ].map((tech, index) => (
 
-              <span
-                key={index}
-                className="bg-slate-800 px-4 py-2 rounded-lg text-slate-300"
-              >
-                {tech}
-              </span>
 
-            ))}
+            {/* Technologies */}
 
 
-          </div>
+            <div>
 
 
-        </div>
+              <h4 className="
+                text-xl
+                font-bold
+                text-gray-900
+                mb-5
+              ">
+                Technologies Used
+              </h4>
 
 
-      </motion.div>
+              <div className="flex flex-wrap gap-3">
+
+
+                {technologies.map((tech,index)=>(
+
+                  <span
+                    key={index}
+                    className="
+                    bg-blue-50
+                    text-blue-700
+                    border
+                    border-blue-100
+                    px-4
+                    py-2
+                    rounded-full
+                    text-sm
+                    font-medium
+                    "
+                  >
+
+                    {tech}
+
+                  </span>
+
+                ))}
+
+
+              </div>
+
+
+            </div>
+
+
+
+          </Card>
+
+
+        </motion.div>
+
+
+      </div>
 
 
     </section>
   );
 }
+
 
 export default Experience;

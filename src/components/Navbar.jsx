@@ -4,95 +4,88 @@ import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const links = [
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-lg border-b border-gray-200 z-50">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-cyan-400">
-          Hadia
-        </h1>
+        <a
+          href="#"
+          className="text-2xl font-bold tracking-tight text-gray-900"
+        >
+          Hadia<span className="text-blue-600">.</span>
+        </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 text-slate-300">
-          <a href="#about" className="hover:text-cyan-400 transition">
-            About
-          </a>
-
-          <a href="#skills" className="hover:text-cyan-400 transition">
-            Skills
-          </a>
-
-          <a href="#projects" className="hover:text-cyan-400 transition">
-            Projects
-          </a>
-
-          <a href="#contact" className="hover:text-cyan-400 transition">
-            Contact
-          </a>
-        </div>
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
 
         {/* Right Side */}
         <div className="flex items-center gap-4">
+
           <a
             href="https://github.com/hadia55op"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub Profile"
-            className="text-xl text-slate-300 hover:text-cyan-400 transition"
+            className="text-xl text-gray-600 hover:text-blue-600 transition"
           >
             <FaGithub />
           </a>
 
-          {/* Mobile Menu Button */}
           <button
+            className="md:hidden text-2xl text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-2xl text-slate-300 hover:text-cyan-400"
-            aria-label="Toggle menu"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
+
         </div>
+
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
+
       {isOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800">
-          <div className="flex flex-col items-center py-4 space-y-4 text-slate-300">
-            <a
-              href="#about"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-cyan-400"
-            >
-              About
-            </a>
+        <div className="md:hidden bg-white border-t border-gray-200">
 
-            <a
-              href="#skills"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-cyan-400"
-            >
-              Skills
-            </a>
+          <div className="flex flex-col py-4">
 
-            <a
-              href="#projects"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-cyan-400"
-            >
-              Projects
-            </a>
+            {links.map((link) => (
 
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-cyan-400"
-            >
-              Contact
-            </a>
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition"
+              >
+                {link.name}
+              </a>
+
+            ))}
+
           </div>
+
         </div>
       )}
-    </nav>
+
+    </header>
   );
 }
 

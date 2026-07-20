@@ -1,28 +1,84 @@
+import { FaGithub, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
+import SectionTitle from "./ui/SectionTitle";
+import Button from "./ui/Button";
+
 function Contact() {
   return (
     <section
       id="contact"
-      className="bg-slate-900 py-24"
+      className="py-24 bg-white"
     >
-      <div className="max-w-3xl mx-auto text-center">
 
-        <h2 className="text-4xl font-bold text-cyan-400 mb-6">
-          Contact Me
-        </h2>
+      <div className="max-w-4xl mx-auto px-6 text-center">
 
-        <p className="text-slate-400 mb-10">
-          Interested in working together?
-          Let's build something amazing.
-        </p>
-
-        <a
-          href="mailto:hadizaidkhan@gmail.com"
-          className="bg-cyan-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 transition"
+        <motion.div
+          initial={{opacity:0,y:40}}
+          whileInView={{opacity:1,y:0}}
+          transition={{duration:0.7}}
+          viewport={{once:true}}
         >
-          Send Email
-        </a>
+
+          <SectionTitle>
+            Contact Me
+          </SectionTitle>
+
+
+          <p className="text-gray-600 text-lg mb-8">
+            I'm currently looking for opportunities where I can
+            contribute as a Full Stack Developer.
+          </p>
+
+
+          <div
+            className="
+            flex
+            flex-col
+            items-center
+            gap-4
+            "
+          >
+
+            <div
+              className="
+              flex
+              items-center
+              gap-3
+              text-gray-700
+              "
+            >
+
+              <FaEnvelope className="text-blue-600"/>
+
+              <a
+                href="mailto:hadizaidkhan@gmail.com"
+                className="
+                hover:text-blue-600
+                transition
+                "
+              >
+                hadizaidkhan@gmail.com
+              </a>
+
+            </div>
+
+
+
+            <Button href="mailto:hadizaidkhan@gmail.com">
+              Send Email
+            </Button>
+
+
+
+
+
+          </div>
+
+
+        </motion.div>
 
       </div>
+
     </section>
   );
 }

@@ -1,108 +1,205 @@
 import { motion } from "framer-motion";
-//import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Button from "./ui/Button";
+
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-24">
+    <section
+      id="home"
+      className="
+        relative
+        overflow-hidden
+        min-h-screen
+        flex
+        items-center
+        pt-20
+        bg-gradient-to-br
+        from-white
+        via-slate-50
+        to-blue-50
+      "
+    >
 
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      {/* Background Glow Effects */}
+      <div
+        className="
+          absolute
+          inset-0
+          overflow-hidden
+          pointer-events-none
+        "
+      >
+
+        <div
+          className="
+            absolute
+            -top-52
+            -right-40
+            w-[500px]
+            h-[500px]
+            rounded-full
+            bg-blue-200
+            blur-[120px]
+            opacity-30
+          "
+        />
+
+
+        <div
+          className="
+            absolute
+            bottom-0
+            -left-32
+            w-[350px]
+            h-[350px]
+            rounded-full
+            bg-cyan-100
+            blur-[120px]
+            opacity-40
+          "
+        />
+
+      </div>
+
+
+
+      {/* Main Content */}
+      <div
+        className="
+          relative
+          z-10
+          max-w-6xl
+          mx-auto
+          px-6
+          grid
+          lg:grid-cols-2
+          gap-16
+          items-center
+        "
+      >
 
 
         {/* Left Content */}
+
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
 
-          <p className="text-cyan-400 text-lg mb-4">
-            Hello, I'm
+
+          <p
+            className="
+              text-blue-600
+              font-semibold
+              uppercase
+              tracking-widest
+              mb-4
+            "
+          >
+            Full Stack Developer
           </p>
 
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-5">
-            Hadia Khalil
+
+          <h1
+            className="
+              text-5xl
+              md:text-6xl
+              font-extrabold
+              text-gray-900
+              leading-tight
+            "
+          >
+
+            Hi, I'm
+            <br />
+
+            <span className="text-blue-600">
+              Hadia Khalil
+            </span>
+
           </h1>
 
 
-          <h2 className="text-2xl md:text-3xl text-slate-300 mb-6">
-            Full Stack Developer
-          </h2>
 
-
-          <p className="text-slate-400 leading-7 max-w-xl mb-8">
-            Full Stack Developer with a YH education and practical LIA experience.
-            Experienced in developing modern web applications using React, Java,
-            Spring Boot, databases, REST APIs, and agile development practices.
+          <p
+            className="
+              mt-6
+              text-lg
+              text-gray-600
+              leading-8
+              max-w-xl
+            "
+          >
+            Full Stack Developer with YH education and practical LIA
+            experience developing responsive web applications using React,
+            Java, Spring Boot, SQL databases, REST APIs and agile
+            development practices.
           </p>
 
 
 
-          <div className="flex gap-4 flex-wrap">
+
+          {/* Buttons */}
+
+          <div
+            className="
+              flex
+              flex-wrap
+              gap-4
+              mt-10
+            "
+          >
 
 
-            <a
-              href="#projects"
-              className="
-              bg-cyan-500
-              text-slate-950
-              px-6
-              py-3
-              rounded-lg
-              font-semibold
-              hover:bg-cyan-400
-              transition
-              "
-            >
+            <Button href="#projects">
               View Projects
-            </a>
+            </Button>
 
 
 
-            <a
+            <Button
               href="#contact"
-              className="
-              border
-              border-cyan-500
-              px-6
-              py-3
-              rounded-lg
-              hover:bg-cyan-500
-              hover:text-black
-              transition
-              "
+              variant="secondary"
             >
               Contact Me
-            </a>
+            </Button>
 
 
           </div>
 
 
 
-          <div className="flex gap-6 mt-8 text-2xl">
+
+          {/* Social Links */}
+
+          <div
+            className="
+              flex
+              items-center
+              gap-5
+              mt-10
+            "
+          >
 
             <a
               href="https://github.com/hadia55op"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              className="hover:text-cyan-400 transition"
+              aria-label="GitHub"
+              className="
+                text-2xl
+                text-gray-600
+                hover:text-blue-600
+                transition
+              "
             >
+
               <FaGithub />
+
             </a>
 
-            {/*
-            <a
-              href="https://www.linkedin.com/in/your-linkedin-profile/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              className="hover:text-cyan-400 transition"
-            >
-              <FaLinkedin />
-            </a>
-            */}
 
           </div>
 
@@ -113,41 +210,80 @@ function Hero() {
 
 
 
-        {/* Right Side Image Placeholder */}
+
+        {/* Right Image */}
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center"
+          className="
+            flex
+            justify-center
+          "
         >
+
 
           <div
             className="
-            w-72
-            h-72
-            rounded-full
-            bg-gradient-to-r
-            from-cyan-400
-            to-blue-600
-            p-1
+              relative
             "
           >
 
+
+            {/* Glow */}
+
             <div
               className="
-              w-full
-              h-full
-              rounded-full
-              bg-slate-950
-              flex
-              items-center
-              justify-center
+                absolute
+                inset-0
+                rounded-full
+                bg-blue-200
+                blur-3xl
+                opacity-70
+              "
+            />
+
+
+
+            {/* Circle */}
+
+            <div
+              className="
+                relative
+                w-80
+                h-80
+                rounded-full
+                bg-gradient-to-br
+                from-blue-600
+                to-indigo-600
+                p-2
+                shadow-xl
               "
             >
 
-              <span className="text-7xl">
-                👨‍💻
-              </span>
+
+              <div
+                className="
+                  w-full
+                  h-full
+                  rounded-full
+                  bg-white
+                  flex
+                  items-center
+                  justify-center
+                  overflow-hidden
+                "
+              >
+
+                {/* Replace later with your photo */}
+
+                <span className="text-8xl">
+                  👩‍💻
+                </span>
+
+
+              </div>
 
 
             </div>
@@ -159,11 +295,13 @@ function Hero() {
         </motion.div>
 
 
+
       </div>
 
 
     </section>
   );
 }
+
 
 export default Hero;

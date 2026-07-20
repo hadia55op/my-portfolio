@@ -1,10 +1,32 @@
 function Footer() {
   return (
-    <footer className="py-8 text-center border-t border-slate-800">
+    <footer
+      className="
+      py-8
+      bg-gray-50
+      border-t
+      border-gray-200
+      "
+    >
 
-      <p className="text-slate-500">
-        © 2026 Hadia Khalil. Built with React & Tailwind CSS.
-      </p>
+      <div className="
+        max-w-6xl
+        mx-auto
+        px-6
+        text-center
+      ">
+
+
+        <p className="
+          text-gray-500
+          text-sm
+        ">
+          © 2026 Hadia Khalil. Built with React and Tailwind CSS.
+        </p>
+
+
+      </div>
+
 
     </footer>
   );
