@@ -1,6 +1,5 @@
-import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 import Button from "./ui/Button";
-
 function Hero() {
   return (
     <section
