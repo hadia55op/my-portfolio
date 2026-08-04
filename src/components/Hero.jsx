@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import Button from "./ui/Button";
 
