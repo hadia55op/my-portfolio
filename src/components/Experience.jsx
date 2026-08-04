@@ -17,7 +17,7 @@ function Experience() {
     "REST API",
     "Maven",
     "GitHub",
-    "CI/CD",
+    //"CI/CD",
     "Render",
     "Supabase"
   ];

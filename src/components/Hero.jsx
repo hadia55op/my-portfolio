@@ -21,6 +21,7 @@ function Hero() {
     >
 
       {/* Background Glow Effects */}
+
       <div
         className="
           absolute
@@ -64,26 +65,21 @@ function Hero() {
 
 
       {/* Main Content */}
+
       <div
         className="
           relative
           z-10
-          max-w-6xl
+          max-w-5xl
           mx-auto
           px-6
-          grid
-          lg:grid-cols-2
-          gap-16
-          items-center
+          text-center
         "
       >
 
-
-        {/* Left Content */}
-
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
 
@@ -129,7 +125,8 @@ function Hero() {
               text-lg
               text-gray-600
               leading-8
-              max-w-xl
+              max-w-2xl
+              mx-auto
             "
           >
             Full Stack Developer with YH education and practical LIA
@@ -140,18 +137,17 @@ function Hero() {
 
 
 
-
           {/* Buttons */}
 
           <div
             className="
               flex
+              justify-center
               flex-wrap
               gap-4
               mt-10
             "
           >
-
 
             <Button href="#projects">
               View Projects
@@ -171,19 +167,19 @@ function Hero() {
 
 
 
-
           {/* Social Links */}
 
           <div
             className="
               flex
+              justify-center
               items-center
               gap-5
               mt-10
             "
           >
 
-            <a
+            {/*<a
               href="https://github.com/hadia55op"
               target="_blank"
               rel="noopener noreferrer"
@@ -199,101 +195,12 @@ function Hero() {
               <FaGithub />
 
             </a>
-
-
-          </div>
-
-
-        </motion.div>
-
-
-
-
-
-
-        {/* Right Image */}
-
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="
-            flex
-            justify-center
-          "
-        >
-
-
-          <div
-            className="
-              relative
-            "
-          >
-
-
-            {/* Glow */}
-
-            <div
-              className="
-                absolute
-                inset-0
-                rounded-full
-                bg-blue-200
-                blur-3xl
-                opacity-70
-              "
-            />
-
-
-
-            {/* Circle */}
-
-            <div
-              className="
-                relative
-                w-80
-                h-80
-                rounded-full
-                bg-gradient-to-br
-                from-blue-600
-                to-indigo-600
-                p-2
-                shadow-xl
-              "
-            >
-
-
-              <div
-                className="
-                  w-full
-                  h-full
-                  rounded-full
-                  bg-white
-                  flex
-                  items-center
-                  justify-center
-                  overflow-hidden
-                "
-              >
-
-                {/* Replace later with your photo */}
-
-                <span className="text-8xl">
-                  👩‍💻
-                </span>
-
-
-              </div>
-
-
-            </div>
-
+*/}
 
           </div>
 
 
         </motion.div>
-
 
 
       </div>
