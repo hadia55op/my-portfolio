@@ -37,7 +37,7 @@ function Skills() {
         "PostgreSQL",
         "Git",
         "GitHub",
-        "CI/CD"
+        //"CI/CD"
       ]
     },
 
