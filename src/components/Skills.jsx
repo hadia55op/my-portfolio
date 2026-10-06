@@ -14,7 +14,7 @@ function Skills() {
         "CSS3",
         "Tailwind CSS",
         "Thymeleaf",
-        "HTMX"
+        //"HTMX"
       ]
     },
 
